@@ -16,6 +16,7 @@ dependencies:
     sdk: flutter
   intl: ^0.17.0
   mobile_scanner: ^2.0.0
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   bloc_test: ^9.1.0
