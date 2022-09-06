@@ -65,8 +65,20 @@ class GeneratorView extends StatelessWidget {
                     previous.qrCode != current.qrCode &&
                     current.status == GeneratorStatus.success,
                 builder: (context, state) {
-                  return QrImage(
-                    data: state.qrCode ?? '',
+                  return AnimatedContainer(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                    height: state.qrCode == null ? 0 : 200,
+                    child: QrImage(
+                      data: state.qrCode ?? '',
+                      errorCorrectionLevel: QrErrorCorrectLevel.M,
+                      errorStateBuilder: (context, error) {
+                        return const Text(
+                          'Something went wrong!',
+                          textAlign: TextAlign.center,
+                        );
+                      },
+                    ),
                   );
                 },
               )
