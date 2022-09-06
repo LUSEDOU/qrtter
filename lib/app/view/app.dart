@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:qrtter/generator/generator.dart';
-import 'package:qrtter/home/home.dart';
+// import 'package:qrtter/home/home.dart';
 
 import 'package:qrtter/l10n/l10n.dart';
 
